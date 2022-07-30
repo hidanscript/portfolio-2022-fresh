@@ -5,6 +5,7 @@
 /// <reference lib="deno.unstable" />
 
 import { InnerRenderFunction, RenderContext, start } from "$fresh/server.ts";
+import "https://deno.land/x/dotenv/load.ts";
 import manifest from "./fresh.gen.ts";
 
 import { config, setup } from "@twind";
