@@ -36,20 +36,20 @@ export default function Home({ data }: PageProps) {
       <head>
         <title>Home</title>
       </head>
-      <div style={styles.navbar}>
+      <nav style={styles.navbar}>
         <a href="https://github.com/hidanscript" target="_blank" class={tw`bg-teal-500 hover:bg-white text-black py-2 px-4 rounded`} style={styles.button}>
           Github
         </a>
         <a href="https://linkedin.com/in/david-marcano/" target="_blank" class={tw`bg-teal-500 hover:bg-white text-black py-2 px-4 rounded ml-4`} style={styles.button}>
           Linkedin
         </a>
-      </div>
-      <div class={tw`p-4 mx-auto mb-10 bg-sky-500/50 text-xl h-screen bg-emerald-200`} style={styles.hero}>
+      </nav>
+      <main class={tw`p-4 mx-auto mb-10 bg-sky-500/50 text-xl h-screen bg-emerald-200`} style={styles.hero}>
         <div class={tw`p-4 mx-auto max-w-screen-lg bg-sky-500/50 text-xl`}>
           <h1 class={tw`text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate`}>David Marcano</h1>
           <p class={tw`text-base dark:text-white`}>Full-stack developer</p>
         </div>
-      </div>
+      </main>
       <div class={tw`p-4 mx-auto max-w-screen-sm mt-6 bg-sky-500/50 text-xl`}>
           <h3 class={tw`text-2xl font-bold leading-7 mt-6 text-gray-900 sm:text-3xl sm:truncate`}>About me</h3>
           <p class={tw`text-base dark:text-white`} style={styles.text}>
