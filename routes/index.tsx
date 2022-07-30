@@ -36,6 +36,7 @@ export default function Home({ data }: PageProps) {
     <div>
       <head>
         <title>Home</title>
+        <link href="globals.css" rel="stylesheet" />
       </head>
       <nav style={styles.navbar}>
         <a href="https://github.com/hidanscript" target="_blank" class={tw`bg-teal-500 hover:bg-white text-black py-2 px-4 rounded`} style={styles.button}>
@@ -49,7 +50,9 @@ export default function Home({ data }: PageProps) {
         <div class={tw`p-4 mx-auto max-w-screen-lg bg-sky-500/50 text-xl flex justify-center items-center flex-col`}>
             <Cat />
             <h1 class={tw`text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate`}>David Marcano</h1>
-            <p class={tw`text-base dark:text-white`}>Full-stack developer</p>
+            <div class="typewriter">
+              <p>Full-stack developer</p>
+            </div>
         </div>
       </main>
       <div class={tw`p-4 mx-auto max-w-screen-sm mt-6 bg-sky-500/50 text-xl`}>
@@ -157,9 +160,5 @@ const styles = {
     fontSize: '1.2rem',
     fontWeight: 'bold',
     marginTop: 30,
-    hover: {
-      color: '#86efac',
-      textDecoration: 'underline'
-    }
   }
 };
