@@ -40,6 +40,9 @@ export default function Home({ data }: PageProps) {
         <a href="https://github.com/hidanscript" target="_blank" class={tw`bg-teal-500 hover:bg-white text-black py-2 px-4 rounded`} style={styles.button}>
           Github
         </a>
+        <a href="https://linkedin.com/in/david-marcano/" target="_blank" class={tw`bg-teal-500 hover:bg-white text-black py-2 px-4 rounded ml-4`} style={styles.button}>
+          Linkedin
+        </a>
       </div>
       <div class={tw`p-4 mx-auto mb-10 bg-sky-500/50 text-xl h-screen bg-emerald-200`} style={styles.hero}>
         <div class={tw`p-4 mx-auto max-w-screen-lg bg-sky-500/50 text-xl`}>
