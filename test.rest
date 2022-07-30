@@ -1,1 +1,0 @@
-GET hidanscript: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 https://api.github.com/users/octocat
