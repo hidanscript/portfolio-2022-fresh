@@ -10,7 +10,7 @@ export const handler: Handlers = {
         authorization: "token " + Deno.env.get("GITHUB_ACCESS_TOKEN")
       }
     });
-    console.log(resp);
+    console.log(Deno.env.get("GITHUB_ACCESS_TOKEN"));
     if (resp.status === 404) {
       return ctx.render(null);
     }
