@@ -44,10 +44,11 @@ export default function Home({ data }: PageProps) {
           Linkedin
         </a>
       </nav>
-      <main class={tw`p-4 mx-auto mb-10 bg-sky-500/50 text-xl h-screen bg-emerald-200`} style={styles.hero}>
-        <div class={tw`p-4 mx-auto max-w-screen-lg bg-sky-500/50 text-xl`}>
-          <h1 class={tw`text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate`}>David Marcano</h1>
-          <p class={tw`text-base dark:text-white`}>Full-stack developer</p>
+      <main class={tw`p-4 mx-auto mb-10 bg-sky-500/50 text-xl h-screen bg-emerald-200 pb-20`} style={styles.hero}>
+        <div class={tw`p-4 mx-auto max-w-screen-lg bg-sky-500/50 text-xl flex justify-center items-center flex-col`}>
+            <img src="/cat.png" class={tw`box-content`} style={styles.cat}/>
+            <h1 class={tw`text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate`}>David Marcano</h1>
+            <p class={tw`text-base dark:text-white`}>Full-stack developer</p>
         </div>
       </main>
       <div class={tw`p-4 mx-auto max-w-screen-sm mt-6 bg-sky-500/50 text-xl`}>
@@ -134,6 +135,10 @@ const styles = {
     height: '50vh',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  cat: {
+    width: '40%',
+    marginBottom: 20
   },
   navbar: {
     padding: '0.5rem 1rem',
