@@ -10,11 +10,11 @@ export const handler: Handlers = {
         authorization: "token " + Deno.env.get("GITHUB_ACCESS_TOKEN")
       }
     });
-    console.log(Deno.env.get("GITHUB_ACCESS_TOKEN"));
     if (resp.status === 404) {
       return ctx.render(null);
     }
     let repos = await resp.json();
+    console.log(repos);
     repos.sort((a: any, b: any) => {
       if (a.created_at > b.created_at) {
         return -1;
