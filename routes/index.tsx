@@ -4,6 +4,9 @@ import { tw } from "@twind";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import ContactForm from "../islands/ContactForm.tsx";
 import Cat from "../islands/Cat.tsx";
+import { Repository } from "../utils/interface.ts";
+import { mapRepositoryList } from "../utils/mapper.ts";
+import { sortRepositoriesByStars } from "../utils/sorter.ts";
 
 export const handler: Handlers = {
   async GET(_, ctx) {
@@ -15,17 +18,9 @@ export const handler: Handlers = {
     if (resp.status === 404) {
       return ctx.render(null);
     }
-    let repos = await resp.json();
-    repos.sort((a: any, b: any) => {
-      if (a.stargazers_count > b.stargazers_count) {
-        return -1;
-      }
-      if (a.stargazers_count < b.stargazers_count) {
-        return 1;
-      }
-      return 0;
-    });
-    repos = repos.slice(0, 3);
+    let repos: Repository[] = await resp.json();
+    repos = sortRepositoriesByStars(repos);
+    repos = mapRepositoryList(repos.slice(0, 3));
     return ctx.render(repos);
   }
 }
@@ -56,7 +51,7 @@ export default function Home({ data }: PageProps) {
         </div>
       </main>
       <div class={tw`p-4 mx-auto max-w-screen-sm mt-6 bg-sky-500/50 text-xl`}>
-          <h3 class={tw`text-2xl font-bold leading-7 mt-6 text-gray-900 sm:text-3xl sm:truncate`}>🐱 About me</h3>
+          <h3 class={tw`text-2xl font-bold leading-7 mt-10 text-gray-900 sm:text-3xl sm:truncate`}>🐱 About me</h3>
           <p class={tw`text-base dark:text-white`} style={styles.text}>
             Hi I'm David Ortiz Marcano, a software developer base in Argentina,
             I'm a passionate and hard-working person who loves to learn new things.
@@ -66,10 +61,10 @@ export default function Home({ data }: PageProps) {
             High proficiency in JavaScript, TypeScript, React, NodeJS, and MongoDB.
           </p>
 
-          <h3 class={tw`text-2xl font-bold leading-7 mt-10 text-gray-900 sm:text-3xl sm:truncate`}>📌 Work experience</h3>
+          <h3 class={tw`text-2xl font-bold leading-7 mt-20 text-gray-900 sm:text-3xl sm:truncate`}>📌 Work experience</h3>
 
           <h4 class={tw`text-md font-bold mt-10 text-gray-900 m-0`}>👜 Alchemy (March, 2021 - July, 2022)</h4>
-          <p class={tw`text-sm dark:text-white m-0`}>NodeJS Developer</p>
+          <span class={tw`text-sm dark:text-white m-0`}>NodeJS Developer</span>
           <p class={tw`text-base dark:text-white`} style={styles.text}>
             Development, and implementation in NodeJS, MongoDB and Express.JS backend on FinTech applications, managing and processing loans, credit scores, payment schedules, etc.        
           </p>
@@ -81,7 +76,7 @@ export default function Home({ data }: PageProps) {
           </p>
 
           <h4 class={tw`text-md font-bold mt-10 text-gray-900 m-0`}>👜 Wisboo (July, 2020 - March, 2021)</h4>
-          <p class={tw`text-sm dark:text-white m-0`}>Fullstack Developer</p>
+          <span class={tw`text-sm dark:text-white m-0`}>Fullstack Developer</span>
           <p class={tw`text-base dark:text-white`} style={styles.text}>
             Development and integration of views, templates, bug fixes, optimization, scalability and logic in Angular.js, using Javascript, SCSS and HTML, making requests with an REST API to the backend.
           </p>
@@ -90,7 +85,7 @@ export default function Home({ data }: PageProps) {
           </p>
 
           <h4 class={tw`text-md font-bold mt-10 text-gray-900 m-0`}>👜 Clarity S.A (July, 2019 - July, 2020)</h4>
-          <p class={tw`text-sm dark:text-white m-0`}>Fullstack Developer</p>
+          <span class={tw`text-sm dark:text-white m-0`}>Fullstack Developer</span>
           <p class={tw`text-base dark:text-white`} style={styles.text}>
             Development and maintenance of ERP system, laying out the whole software in ASP (Front-end) and managing queries, stored procedures, and performance in Microsoft SQL Server,
           </p>
@@ -98,8 +93,8 @@ export default function Home({ data }: PageProps) {
             Scrum methodology to support the team effectively and quickly.
           </p>
 
-          <h3 class={tw`text-2xl font-bold leading-7 mt-10 text-gray-900 sm:text-3xl sm:truncate`}>✨ Repositories</h3>
-          { data && data.map((repo: any) => (
+          <h3 class={tw`text-2xl font-bold leading-7 mt-20 text-gray-900 sm:text-3xl sm:truncate`}>✨ Repositories</h3>
+          { data && data.map((repo: Repository) => (
             <a href={repo.html_url} target="_blank" class={tw`block flex flex-col p-6 mt-6 max-w-screen bg-gray-100 rounded-lg border border-gray-200 shadow-md hover:bg-gray-200 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700`}>
               <div class={tw`flex justify-between items-center`}>
                 <h5 class={tw`mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white`}>{repo.name}</h5>

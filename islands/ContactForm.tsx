@@ -3,27 +3,8 @@ import { h } from "preact";
 import { tw } from "@twind";
 
 export default function ContactForm () {
-
-    const handleSubmit = (e: Event) => {
-        e.preventDefault();
-        const options = {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json',
-                'X-RapidAPI-Key': Deno.env.get('RAPID_API_KEY') || '',
-                'X-RapidAPI-Host': 'rapidprod-sendgrid-v1.p.rapidapi.com',
-            },
-            body: '{"personalizations":[{"to":[{"email":"hidanshira2@gmail.com"}],"subject":"Hello, World!"}],"from":{"email":"dmarcano.ml@gmail.com"},"content":[{"type":"text/plain","value":"Hello, World!"}]}'
-        };
-        
-        fetch('https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send', options)
-            .then(response => response.json())
-            .then(response => console.log(response))
-            .catch(err => console.error(err));
-    }
-
     return (
-        <form onSubmit={handleSubmit} class={tw`w-full max-w-lg`}>
+        <form class={tw`w-full max-w-lg`}>
             <div class={tw`flex flex-wrap -mx-3 mb-6`}>
                 <div class={tw`w-full md:w-1/2 px-3 mb-6 md:mb-0`}>
                 <label class={tw`block uppercase tracking-wide text-gray-700 text-xs mb-2" for="grid-last-name`}>
