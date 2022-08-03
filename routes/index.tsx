@@ -34,13 +34,25 @@ export default function Home({ data }: PageProps) {
         <link href="globals.css" rel="stylesheet" />
       </head>
       <nav style={styles.navbar}>
-        <a href="https://github.com/hidanscript" target="_blank" class={tw`bg-teal-500 hover:bg-white text-black py-2 px-4 rounded`} style={styles.button}>
+        <a
+          href="https://github.com/hidanscript"
+          rel="noopener noreferrer" target="_blank"
+          class={tw`bg-teal-500 hover:bg-white text-black py-2 px-4 rounded`}
+          style={styles.button}
+        >
           Github
         </a>
-        <a href="https://linkedin.com/in/david-marcano/" target="_blank" class={tw`bg-teal-500 hover:bg-white text-black py-2 px-4 rounded ml-4`} style={styles.button}>
+        <a
+          href="https://linkedin.com/in/david-marcano/"
+          rel="noopener noreferrer"
+          target="_blank"
+          class={tw`bg-teal-500 hover:bg-white text-black py-2 px-4 rounded ml-4`}
+          style={styles.button}
+        >
           Linkedin
         </a>
       </nav>
+
       <main class={tw`p-4 mx-auto mb-10 bg-sky-500/50 text-xl h-screen bg-emerald-200 pb-20`} style={styles.hero}>
         <div class={tw`p-4 mx-auto max-w-screen-lg bg-sky-500/50 text-xl flex justify-center items-center flex-col`}>
             <Cat />
@@ -50,9 +62,10 @@ export default function Home({ data }: PageProps) {
             </div>
         </div>
       </main>
-      <div class={tw`p-4 mx-auto max-w-screen-sm mt-6 bg-sky-500/50 text-xl`}>
+      
+      <section class={tw`p-4 mx-auto max-w-screen-sm mt-6 bg-sky-500/50 text-xl`}>
           <h3 class={tw`text-2xl font-bold leading-7 mt-10 text-gray-900 sm:text-3xl sm:truncate`}>🐱 About me</h3>
-          <p class={tw`text-base dark:text-white`} style={styles.text}>
+          <p class={tw`text-base dark:text-white`} style={styles.higherText}>
             Hi I'm David Ortiz Marcano, a software developer base in Argentina,
             I'm a passionate and hard-working person who loves to learn new things.
           </p>
@@ -61,7 +74,7 @@ export default function Home({ data }: PageProps) {
             High proficiency in JavaScript, TypeScript, React, NodeJS, and MongoDB.
           </p>
 
-          <h3 class={tw`text-2xl font-bold leading-7 mt-20 text-gray-900 sm:text-3xl sm:truncate`}>📌 Work experience</h3>
+          <h3 class={tw`text-2xl font-bold leading-7 mt-16 text-gray-900 sm:text-3xl sm:truncate`}>📌 Work experience</h3>
 
           <h4 class={tw`text-md font-bold mt-10 text-gray-900 m-0`}>👜 Alchemy (March, 2021 - July, 2022)</h4>
           <span class={tw`text-sm dark:text-white m-0`}>NodeJS Developer</span>
@@ -95,7 +108,12 @@ export default function Home({ data }: PageProps) {
 
           <h3 class={tw`text-2xl font-bold leading-7 mt-20 text-gray-900 sm:text-3xl sm:truncate`}>✨ Repositories</h3>
           { data && data.map((repo: Repository) => (
-            <a href={repo.html_url} target="_blank" class={tw`block flex flex-col p-6 mt-6 max-w-screen bg-gray-100 rounded-lg border border-gray-200 shadow-md hover:bg-gray-200 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700`}>
+            <a
+              href={repo.html_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class={tw`block flex flex-col p-6 mt-6 max-w-screen bg-gray-100 rounded-lg border border-gray-200 shadow-md hover:bg-gray-200 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700`}
+            >
               <div class={tw`flex justify-between items-center`}>
                 <h5 class={tw`mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white`}>{repo.name}</h5>
                 <p class={tw`text-sm dark:text-white py-1 px-4 rounded-full ${ repo.language == 'JavaScript' ? 'bg-yellow-200' : 'bg-blue-200'}`}>{repo.language}</p>
@@ -110,17 +128,29 @@ export default function Home({ data }: PageProps) {
           <div class={tw`flex justify-center mt-10`}>
             <ContactForm />
           </div>
-      </div>
+      </section>
 
       <footer class={tw`p-4 bg-gray-100 mt-6 rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800`}>
           <span class={tw`text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com/" class="hover:underline`}>David Marcano 2022<a />. All Rights Reserved.
           </span>
           <ul class={tw`flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0`}>
               <li>
-                  <a href="#" class={tw`mr-4 hover:underline md:mr-6`}>Contact</a>
+                  <a
+                    href="https://linkedin.com/in/david-marcano/"
+                    rel="noopener noreferrer"
+                    class={tw`mr-4 hover:underline md:mr-6`}
+                  >
+                    Linkedin
+                  </a>
               </li>
               <li>
-                  <a href="#" class={tw`mr-4 hover:underline md:mr-6`}>Github</a>
+                  <a
+                    href="https://github.com/hidanscript"
+                    rel="noopener noreferrer"
+                    class={tw`mr-4 hover:underline md:mr-6`}
+                  >
+                    Github
+                  </a>
               </li>
           </ul>
       </footer>
@@ -148,6 +178,9 @@ const styles = {
   },
   text: {
     marginTop: '1rem'
+  },
+  higherText: {
+    marginTop: '2rem'
   },
   showMore: {
     cursor: 'pointer',
