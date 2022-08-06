@@ -20,34 +20,10 @@ export default function AboutMe () {
 }
 
 const styles = {
-    hero: {
-      backgroundColor: '#86efac',
-      display: 'flex',
-      height: '50vh',
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    navbar: {
-      padding: '0.5rem 1rem',
-      backgroundColor: '#86efac',
-      display: 'flex',
-      justifyContent: 'flex-end',
-      alignItems: 'center'
-    },
-    button: {
-      border: '1px solid black'
-    },
     text: {
       marginTop: '1rem'
     },
     higherText: {
       marginTop: '2rem'
-    },
-    showMore: {
-      cursor: 'pointer',
-      color: '#86efac',
-      fontSize: '1.2rem',
-      fontWeight: 'bold',
-      marginTop: 30,
     }
 };

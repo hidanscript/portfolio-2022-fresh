@@ -56,18 +56,5 @@ const styles = {
     },
     button: {
       border: '1px solid black'
-    },
-    text: {
-      marginTop: '1rem'
-    },
-    higherText: {
-      marginTop: '2rem'
-    },
-    showMore: {
-      cursor: 'pointer',
-      color: '#86efac',
-      fontSize: '1.2rem',
-      fontWeight: 'bold',
-      marginTop: 30,
     }
   };

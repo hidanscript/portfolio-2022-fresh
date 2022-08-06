@@ -1,6 +1,9 @@
 /** @jsx h */
-import { h } from "preact";
+/** @jsxFrag Fragment */
+import { h, Fragment } from "preact";
 import { Handlers, PageProps } from "$fresh/server.ts";
+import { Head } from "$fresh/runtime.ts";
+import { tw } from "@twind";
 import { Repository } from "../utils/interface.ts";
 import { mapRepositoryList } from "../utils/mapper.ts";
 import { sortRepositoriesByStars } from "../utils/sorter.ts";
@@ -30,21 +33,30 @@ export const handler: Handlers = {
   }
 }
 
-export default function Home({ data }: PageProps) {
+const TITLE = "Home";
+const DESCRIPTION = "David Marcano - Full-stack developer";
+
+export default function Home({ data, url }: PageProps) {
   return (
-    <div>
-      <head>
+    <>
+      <Head>
         <title>Home</title>
         <link href="globals.css" rel="stylesheet" />
-      </head>
+        <meta name="description" content={DESCRIPTION} />
+        <meta property="og:title" content={TITLE} />
+        <meta property="og:description" content={DESCRIPTION} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={url.href} />
+      </Head>
 
-      <Hero />
-      <AboutMe />
-      <WorkExperience />
-      <Repositories repos={data} />
-      <ContactForm />
-      <Footer />
-
-    </div>
+      <div class={tw`flex flex-col min-h-screen`}>
+        <Hero />
+        <AboutMe />
+        <WorkExperience />
+        <Repositories repos={data} />
+        <ContactForm />
+        <Footer />
+      </div>
+    </>
   );
 }
