@@ -1,7 +1,7 @@
 /** @jsx h */
 import { h } from "preact";
 import { tw } from "@twind";
-import Container from "./Container.tsx";
+import Container from "../components/Container.tsx";
 
 export default function ContactForm () {
     return (

@@ -9,12 +9,12 @@ import { mapRepositoryList } from "../utils/mapper.ts";
 import { sortRepositoriesByStars } from "../utils/sorter.ts";
 
 // Islands
-import Hero from "../islands/Hero.tsx";
-import AboutMe from "../islands/AboutMe.tsx";
-import WorkExperience from "../islands/WorkExperience.tsx";
-import Repositories from "../islands/Repositories.tsx";
+import Hero from "../components/Hero.tsx";
+import AboutMe from "../components/AboutMe.tsx";
+import WorkExperience from "../components/WorkExperience.tsx";
+import Repositories from "../components/Repositories.tsx";
 import ContactForm from "../islands/ContactForm.tsx";
-import Footer from "../islands/Footer.tsx";
+import Footer from "../components/Footer.tsx";
 
 export const handler: Handlers = {
   async GET(_, ctx) {

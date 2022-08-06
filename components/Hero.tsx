@@ -1,7 +1,7 @@
 /** @jsx h */
 import { h } from "preact";
 import { tw } from "@twind";
-import Cat from "./Cat.tsx";
+import Cat from "../islands/Cat.tsx";
 
 export default function Hero () {
     return (
