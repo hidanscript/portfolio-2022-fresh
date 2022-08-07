@@ -104,7 +104,10 @@ export default function ContactForm () {
                         </div>
                     </div>
                     <div class={tw`flex items-center justify-center`}>
-                        <button class={tw`shadow hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white py-2 px-4 rounded-md hover:bg-gray-100`} type="submit" style={styles.button}>
+                        <button
+                            class={tw`shadow focus:shadow-outline focus:outline-none py-2 px-4 rounded-md hover:bg-gray-100 border border-solid border-black w-full text-black`}
+                            type="submit"
+                        >
                             Send
                         </button>
                     </div>
@@ -112,12 +115,4 @@ export default function ContactForm () {
             </div>
         </Container>
     );
-}
-
-const styles = {
-    button: {
-        border: '1px solid #000',
-        color: '#000',
-        width: '100%',
-    }
 }
