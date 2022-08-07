@@ -11,6 +11,6 @@ export default function Cat () {
     }
 
     return (
-        <img src="/cat.png" alt="cat" class={tw`box-content mb-5 cursor-pointer`}  onClick={meow}/>
+        <img src="/cat.png" alt="cat" width={232} height={154} class={tw`box-content mb-5 cursor-pointer`}  onClick={meow}/>
     );
 }
