@@ -8,9 +8,18 @@ export default function Hero () {
         <div class="hero">
             <nav class="bring-to-front" style={styles.navbar}>
                 <a
+                    href="https://linkedin.com/in/david-marcano/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    class={tw`hover:bg-white text-black hover:text-black py-2 px-4 rounded ml-4`}
+                    style={styles.button}
+                >
+                Projects
+                </a>
+                <a
                     href="https://github.com/hidanscript"
                     rel="noopener noreferrer" target="_blank"
-                    class={tw`hover:bg-white text-black hover:text-black py-2 px-4 rounded`}
+                    class={tw`hover:bg-white text-black hover:text-black py-2 px-4 rounded ml-4`}
                     style={styles.button}
                 >
                 Github

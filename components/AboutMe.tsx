@@ -6,7 +6,7 @@ import Container from "./Container.tsx";
 export default function AboutMe () {
     return (
         <Container>
-            <h3 class={tw`text-2xl font-bold leading-7 mt-10 sm:text-3xl sm:truncate`}>🐱 About me</h3>
+            <h3 class={tw`text-2xl font-bold leading-7 mt-32 sm:text-3xl sm:truncate`}>🐱 About me</h3>
             <p class={tw`text-base`} style={styles.higherText}>
                 Hi I'm David Ortiz Marcano, a software developer based in Argentina,
                 I'm a passionate and hard-working person who loves to learn new things.

@@ -11,6 +11,7 @@ import { sortRepositoriesByStars } from "../utils/sorter.ts";
 // Islands
 import Hero from "../components/Hero.tsx";
 import AboutMe from "../components/AboutMe.tsx";
+import Arrow from "../components/Arrow.tsx";
 import WorkExperience from "../components/WorkExperience.tsx";
 import Repositories from "../components/Repositories.tsx";
 import ContactForm from "../islands/ContactForm.tsx";
@@ -51,6 +52,7 @@ export default function Home({ data, url }: PageProps) {
 
       <div class={tw`flex flex-col min-h-screen`}>
         <Hero />
+        <Arrow />
         <AboutMe />
         <WorkExperience />
         <Repositories repos={data} />

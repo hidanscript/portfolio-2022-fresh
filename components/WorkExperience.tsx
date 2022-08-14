@@ -11,13 +11,10 @@ export default function MainSection () {
             <h4 class={tw`text-md font-bold mt-10 m-0`}>👜 Alchemy (March, 2021 - July, 2022)</h4>
             <span class={tw`text-sm dark:text-white m-0`}>NodeJS Developer</span>
             <p class={tw`text-base dark:text-white`} style={styles.text}>
-                Development, and implementation in NodeJS, MongoDB and Express.JS backend on FinTech applications, managing and processing loans, credit scores, payment schedules, etc.        
+                Development, and implementation in NodeJS, MongoDB and Express.JS backend on FinTech applications, managing and processing loans, credit scores, payment schedules, server mainteinance, linux oriented development, etc.        
             </p>
             <p class={tw`text-base dark:text-white`} style={styles.text}>
                 Development of frontend views with Nunjucks and SailsJS
-            </p>
-            <p class={tw`text-base dark:text-white`} style={styles.text}>
-                Server mainteinance and linux oriented development.
             </p>
 
             <h4 class={tw`text-md font-bold mt-10 m-0`}>👜 Wisboo (July, 2020 - March, 2021)</h4>
@@ -32,10 +29,7 @@ export default function MainSection () {
             <h4 class={tw`text-md font-bold mt-10 m-0`}>👜 Clarity S.A (July, 2019 - July, 2020)</h4>
             <span class={tw`text-sm dark:text-white m-0`}>Fullstack Developer</span>
             <p class={tw`text-base dark:text-white`} style={styles.text}>
-                Development and maintenance of ERP system, laying out the whole software in ASP (Front-end) and managing queries, stored procedures, and performance in Microsoft SQL Server,
-            </p>
-            <p class={tw`text-base dark:text-white`} style={styles.text}>
-                Scrum methodology to support the team effectively and quickly.
+                Development and maintenance of ERP system, laying out the whole software in ASP (Front-end) and managing queries, stored procedures, and performance in Microsoft SQL Server, scrum methodology to support the team effectively and quickly.
             </p>
         </Container>
     );

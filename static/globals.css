@@ -96,6 +96,26 @@ body {
   z-index: 1;
 }
 
+.arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.arrow svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.arrow .shape-fill {
+  fill: #F8D03F;
+}
+
 @-webkit-keyframes load3 {
   0% {
     -webkit-transform: rotate(0deg);
