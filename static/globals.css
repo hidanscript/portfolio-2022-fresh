@@ -1,6 +1,6 @@
 .typewriter p {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid #ffe120; /* The typwriter cursor */
+  border-right: 0.15em solid #000; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 0.15em; /* Adjust as needed */
@@ -75,6 +75,27 @@
   color: black;
 }
 
+.hero {
+  color: black;
+  background-color: #F8D03F;
+  position: relative;
+  overflow: hidden;
+}
+
+img {
+  filter: grayscale(100%) invert(100%);
+}
+
+
+body {
+  background-color: #202020;
+  color: white;
+}
+
+.bring-to-front {
+  z-index: 1;
+}
+
 @-webkit-keyframes load3 {
   0% {
     -webkit-transform: rotate(0deg);
@@ -113,6 +134,6 @@
     border-color: transparent;
   }
   50% {
-    border-color: #ffe120;
+    border-color: #000;
   }
 }

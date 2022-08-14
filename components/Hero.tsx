@@ -5,12 +5,12 @@ import Cat from "../islands/Cat.tsx";
 
 export default function Hero () {
     return (
-        <div>
-            <nav style={styles.navbar}>
+        <div class="hero">
+            <nav class="bring-to-front" style={styles.navbar}>
                 <a
                     href="https://github.com/hidanscript"
                     rel="noopener noreferrer" target="_blank"
-                    class={tw`bg-teal-500 hover:bg-white text-black py-2 px-4 rounded`}
+                    class={tw`hover:bg-white text-black hover:text-black py-2 px-4 rounded`}
                     style={styles.button}
                 >
                 Github
@@ -19,17 +19,17 @@ export default function Hero () {
                     href="https://linkedin.com/in/david-marcano/"
                     rel="noopener noreferrer"
                     target="_blank"
-                    class={tw`bg-teal-500 hover:bg-white text-black py-2 px-4 rounded ml-4`}
+                    class={tw`hover:bg-white text-black hover:text-black py-2 px-4 rounded ml-4`}
                     style={styles.button}
                 >
                 Linkedin
                 </a>
             </nav>
 
-            <main class={tw`p-4 mx-auto mb-10 bg-sky-500/50 text-xl h-screen bg-emerald-200 pb-20`} style={styles.hero}>
-                <div class={tw`p-4 mx-auto max-w-screen-lg bg-sky-500/50 text-xl flex justify-center items-center flex-col`}>
+            <main class={tw`p-4 mx-auto mb-10 text-xl h-screen pb-20 glass`} style={styles.hero}>
+                <div class={tw`p-4 mx-auto max-w-screen-lg text-xl flex justify-center items-center flex-col bring-to-front`}>
                     <Cat />
-                    <h1 class={tw`text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate`}>David Marcano</h1>
+                    <h1 class={tw`text-2xl font-bold leading-7 sm:text-3xl sm:truncate`}>David Marcano</h1>
                     <div class="typewriter">
                     <p>Full-stack developer</p>
                     </div>
@@ -41,7 +41,7 @@ export default function Hero () {
 
 const styles = {
     hero: {
-      backgroundColor: '#86efac',
+      // backgroundColor: '#7aa9ff',
       display: 'flex',
       height: '50vh',
       justifyContent: 'center',
@@ -49,12 +49,11 @@ const styles = {
     },
     navbar: {
       padding: '0.5rem 1rem',
-      backgroundColor: '#86efac',
       display: 'flex',
       justifyContent: 'flex-end',
       alignItems: 'center'
     },
     button: {
-      border: '1px solid black'
+      border: '2px solid black'
     }
   };
