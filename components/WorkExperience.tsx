@@ -11,7 +11,7 @@ export default function MainSection () {
 
             <h4 class={tw`text-md font-bold mt-10 mb-3`}>Alchemy (March, 2021 - July, 2022)</h4>
 
-            <div class="tags">
+            <div class={tw`flex flex-wrap items-center`}>
                 <span class={tw`text-sm text-black m-0 pill px-2.5 py-0.5 mt-1 mr-2 rounded-full font-bold`}>NodeJS Developer</span>
                 -
                 <Tags tags={['Node', 'React', 'MongoDB', 'Sails']} />
@@ -26,10 +26,10 @@ export default function MainSection () {
 
             <h4 class={tw`text-md font-bold mt-10 mb-3`}>Wisboo (July, 2020 - March, 2021)</h4>
 
-            <div>
+            <div class={tw`flex flex-wrap items-center`}>
                 <span class={tw`text-sm text-black m-0 pill px-2.5 py-0.5 mt-1 mr-2 rounded-full font-bold`}>Fullstack Developer</span>
                 -
-                <Tags tags={['Angular', 'Ruby on Rails', 'Node', 'PostgreSQL']} />
+                <Tags tags={['Angular', 'Node', 'PostgreSQL', 'Ruby on Rails']} />
             </div>
 
             <p class={tw`text-base dark:text-white`} style={styles.text}>
@@ -40,8 +40,9 @@ export default function MainSection () {
             </p>
 
             <h4 class={tw`text-md font-bold mt-10 mb-3`}>Clarity S.A (July, 2019 - July, 2020)</h4>
-            <div>
-            <span class={tw`text-sm text-black m-0 pill px-2.5 py-0.5 mt-1 mr-2 rounded-full font-bold`}>Fullstack Developer</span>
+
+            <div class={tw`flex flex-wrap items-center`}>
+                <span class={tw`text-sm text-black m-0 pill px-2.5 py-0.5 mt-1 mr-2 rounded-full font-bold`}>Fullstack Developer</span>
                 -
                 <Tags tags={['VB Script', 'MS SQL Server', 'JavaScript', 'Node']} />
             </div>
