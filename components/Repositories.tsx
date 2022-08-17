@@ -19,7 +19,7 @@ export default function Repositories ({ repos }: RepositoriesProps) {
                   href={repo.html_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class={tw`block flex flex-col p-6 mt-6 max-w-screen bg-gray-800 rounded-lg border border-gray-900 shadow-md hover:bg-gray-900`}
+                  class={tw`block flex  p-6 mt-6 max-w-screen bg-gray-800 rounded-lg border border-gray-900 shadow-md hover:bg-gray-900`}
                   style={styles.repoCard}
                 >
                   <div class={tw`flex justify-between items-center`}>
