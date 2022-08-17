@@ -38,7 +38,7 @@
   content: '';
 }
 .loader:after {
-  background: #fff;
+  background-color: #202020;
   width: 75%;
   height: 75%;
   border-radius: 50%;
@@ -80,6 +80,10 @@
   background-color: #F8D03F;
   position: relative;
   overflow: hidden;
+}
+
+.pill {
+  background-color: #F8D03F;
 }
 
 img {
