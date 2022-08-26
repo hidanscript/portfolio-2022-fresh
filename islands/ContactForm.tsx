@@ -38,7 +38,7 @@ export default function ContactForm () {
             { status.error && <Alert message="Something went wrong" type="error" /> }
             { loading && <LoadingSpinner /> }
             
-            <div class={tw`flex justify-center mt-10`}>
+            <div class={tw`flex justify-center mt-10 p-10 rounded-xl shadow-md`} style={styles.contactForm}>
                 <form class={tw`w-full max-w-lg`} onSubmit={handleSubmit}>
                     <div class={tw`flex flex-wrap -mx-3 mb-6`}>
                         <div class={tw`w-full md:w-1/2 px-3 mb-6 md:mb-0`}>
@@ -54,6 +54,7 @@ export default function ContactForm () {
                             value={data.firstName}
                             type="text"
                             disabled={loading}
+                            style={ loading ? { opacity: 0.5 } : {} }
                         />
                         </div>
                         <div class={tw`w-full md:w-1/2 px-3`}>
@@ -69,6 +70,7 @@ export default function ContactForm () {
                             required
                             type="text"
                             disabled={loading}
+                            style={ loading ? { opacity: 0.5 } : {} }
                         />
                         </div>
                     </div>
@@ -86,8 +88,8 @@ export default function ContactForm () {
                             type="email"
                             required
                             disabled={loading}
+                            style={ loading ? { opacity: 0.5 } : {} }
                         />
-                        <p class={tw`text-gray-200 text-xs italic`}>Some tips - as long as needed</p>
                         </div>
                     </div>
                     <div class={tw`flex flex-wrap -mx-3 mb-6`}>
@@ -103,14 +105,17 @@ export default function ContactForm () {
                             value={data.message}
                             required
                             disabled={loading}
+                            style={ loading ? { opacity: 0.5 } : {} }
                         >
                         </textarea>
                         </div>
                     </div>
                     <div class={tw`flex items-center justify-center`}>
                         <button
-                            class={tw`shadow focus:shadow-outline focus:outline-none py-2 px-4 rounded-md hover:bg-gray-100 border border-solid border-gray-200 w-full text-white hover:text-gray-900`}
+                            class={tw`shadow focus:shadow-outline focus:outline-none py-2 px-4 rounded-md border border-solid border-gray-200 w-full text-white ${ !loading ? "hover:text-gray-900 hover:bg-gray-100" : "" }`}
                             type="submit"
+                            disabled={loading}
+                            style={ loading ? { opacity: 0.5 } : {} }
                         >
                             Send
                         </button>
@@ -120,3 +125,9 @@ export default function ContactForm () {
         </Container>
     );
 }
+
+const styles = {
+    contactForm: {
+        backgroundColor: "#121212"
+    }
+};

@@ -13,6 +13,7 @@ import Hero from "../components/Hero.tsx";
 import AboutMe from "../components/AboutMe.tsx";
 import Arrow from "../components/Arrow.tsx";
 import WorkExperience from "../components/WorkExperience.tsx";
+import Projects from "../components/Projects.tsx";
 import Repositories from "../components/Repositories.tsx";
 import ContactForm from "../islands/ContactForm.tsx";
 import Footer from "../components/Footer.tsx";

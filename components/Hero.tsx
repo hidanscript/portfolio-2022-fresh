@@ -6,21 +6,19 @@ import Cat from "../islands/Cat.tsx";
 export default function Hero () {
     return (
         <div class="hero">
-            <nav class="bring-to-front" style={styles.navbar}>
+            <nav class={tw`flex justify-end items-center px-4 py-2 bring-to-front `}>
                 <a
                     href="https://linkedin.com/in/david-marcano/"
                     rel="noopener noreferrer"
                     target="_blank"
-                    class={tw`hover:bg-white text-black hover:text-black py-2 px-4 rounded ml-4`}
-                    style={styles.button}
+                    class={tw`hover:text-white text-black py-2 px-4 rounded ml-4`}
                 >
                 Projects
                 </a>
                 <a
                     href="https://github.com/hidanscript"
                     rel="noopener noreferrer" target="_blank"
-                    class={tw`hover:bg-white text-black hover:text-black py-2 px-4 rounded ml-4`}
-                    style={styles.button}
+                    class={tw`text-black hover:text-white py-2 px-4 rounded ml-4`}
                 >
                 Github
                 </a>
@@ -28,8 +26,7 @@ export default function Hero () {
                     href="https://linkedin.com/in/david-marcano/"
                     rel="noopener noreferrer"
                     target="_blank"
-                    class={tw`hover:bg-white text-black hover:text-black py-2 px-4 rounded ml-4`}
-                    style={styles.button}
+                    class={tw`text-black hover:text-white py-2 px-4 rounded ml-4`}
                 >
                 Linkedin
                 </a>
@@ -50,7 +47,6 @@ export default function Hero () {
 
 const styles = {
     hero: {
-      // backgroundColor: '#7aa9ff',
       display: 'flex',
       height: '50vh',
       justifyContent: 'center',
@@ -62,7 +58,4 @@ const styles = {
       justifyContent: 'flex-end',
       alignItems: 'center'
     },
-    button: {
-      border: '2px solid black'
-    }
   };
