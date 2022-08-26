@@ -35,7 +35,7 @@ export const handler: Handlers = {
 }
 
 const TITLE = "Home";
-const DESCRIPTION = "David Marcano - Full-stack developer";
+const DESCRIPTION = "David Marcano - Fullstack developer";
 
 export default function Home({ data, url }: PageProps) {
   return (
