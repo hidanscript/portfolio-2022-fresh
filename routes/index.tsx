@@ -13,7 +13,6 @@ import Hero from "../components/Hero.tsx";
 import AboutMe from "../components/AboutMe.tsx";
 import Arrow from "../components/Arrow.tsx";
 import WorkExperience from "../components/WorkExperience.tsx";
-import Projects from "../components/Projects.tsx";
 import Repositories from "../components/Repositories.tsx";
 import ContactForm from "../islands/ContactForm.tsx";
 import Footer from "../components/Footer.tsx";
@@ -35,14 +34,14 @@ export const handler: Handlers = {
   }
 }
 
-const TITLE = "Home";
+const TITLE = "David Marcano - Full-stack developer - Portfolio";
 const DESCRIPTION = "David Marcano - Fullstack developer";
 
 export default function Home({ data, url }: PageProps) {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>{TITLE}</title>
         <link href="globals.css" rel="stylesheet" />
         <meta name="description" content={DESCRIPTION} />
         <meta property="og:title" content={TITLE} />
