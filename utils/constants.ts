@@ -17,4 +17,5 @@ export const TECH_COLORS: any = {
     'VB Script': 'bg-blue-500',
     'MS SQL Server': 'bg-yellow-600',
     'JavaScript': 'bg-yellow-400',
+    'Nest': 'bg-pink-500',
 } as const;

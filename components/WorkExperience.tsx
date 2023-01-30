@@ -9,10 +9,25 @@ export default function MainSection () {
         <Container>
             <h3 class={tw`text-2xl font-bold leading-7 mt-16 sm:text-3xl sm:truncate`}>📌 Work experience</h3>
 
+            <h4 class={tw`text-md font-bold mt-10 mb-3`}>Whyline (July, 2022 - Present)</h4>
+
+            <div class={tw`flex flex-wrap items-center`}>
+                <span class={tw`text-sm text-black m-0 pill px-2.5 py-0.5 mt-1 mr-2 rounded-full font-bold`}>Fullstack Software Engineer</span>
+                -
+                <Tags tags={['Angular', 'Node', 'MongoDB', 'Nest']} />
+            </div>
+
+            <p class={tw`text-base dark:text-white`} style={styles.text}>
+                Development and implementation in Angular, NestJs, NodeJs, MongoDB, Redis and Typescript of different modules on a Queue-reservation application, using the SCRUM methodology.
+            </p>
+            <p class={tw`text-base dark:text-white`} style={styles.text}>
+                Code reviewing on github to get the most quality and scalable code for the team, using the best practices and having a clear communication.
+            </p>
+
             <h4 class={tw`text-md font-bold mt-10 mb-3`}>Alchemy (March, 2021 - July, 2022)</h4>
 
             <div class={tw`flex flex-wrap items-center`}>
-                <span class={tw`text-sm text-black m-0 pill px-2.5 py-0.5 mt-1 mr-2 rounded-full font-bold`}>NodeJS Developer</span>
+                <span class={tw`text-sm text-black m-0 pill px-2.5 py-0.5 mt-1 mr-2 rounded-full font-bold`}>Fullstack Software Engineer</span>
                 -
                 <Tags tags={['Node', 'React', 'MongoDB', 'Sails']} />
             </div>
@@ -27,7 +42,7 @@ export default function MainSection () {
             <h4 class={tw`text-md font-bold mt-10 mb-3`}>Wisboo (July, 2020 - March, 2021)</h4>
 
             <div class={tw`flex flex-wrap items-center`}>
-                <span class={tw`text-sm text-black m-0 pill px-2.5 py-0.5 mt-1 mr-2 rounded-full font-bold`}>Fullstack Developer</span>
+                <span class={tw`text-sm text-black m-0 pill px-2.5 py-0.5 mt-1 mr-2 rounded-full font-bold`}>Fullstack Software Engineer</span>
                 -
                 <Tags tags={['Angular', 'Node', 'PostgreSQL', 'Ruby on Rails']} />
             </div>
@@ -42,7 +57,7 @@ export default function MainSection () {
             <h4 class={tw`text-md font-bold mt-10 mb-3`}>Clarity S.A (July, 2019 - July, 2020)</h4>
 
             <div class={tw`flex flex-wrap items-center`}>
-                <span class={tw`text-sm text-black m-0 pill px-2.5 py-0.5 mt-1 mr-2 rounded-full font-bold`}>Fullstack Developer</span>
+                <span class={tw`text-sm text-black m-0 pill px-2.5 py-0.5 mt-1 mr-2 rounded-full font-bold`}>Fullstack Software Engineer</span>
                 -
                 <Tags tags={['VB Script', 'MS SQL Server', 'JavaScript', 'Node']} />
             </div>

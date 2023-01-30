@@ -8,14 +8,6 @@ export default function Hero () {
         <div class="hero">
             <nav class={tw`flex justify-end items-center px-4 py-2 bring-to-front `}>
                 <a
-                    href="https://linkedin.com/in/david-marcano/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    class={tw`hover:text-white text-black py-2 px-4 rounded ml-4`}
-                >
-                Projects
-                </a>
-                <a
                     href="https://github.com/hidanscript"
                     rel="noopener noreferrer" target="_blank"
                     class={tw`text-black hover:text-white py-2 px-4 rounded ml-4`}
