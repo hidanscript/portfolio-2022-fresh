@@ -17,10 +17,12 @@ export default function ContactForm() {
   const [status, setStatus] = useState(initialStatus);
   const [loading, setLoading] = useState(false);
 
+  // deno-lint-ignore no-explicit-any
   const handleChange = (e: any) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
+  // deno-lint-ignore no-explicit-any
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     setLoading(true);
