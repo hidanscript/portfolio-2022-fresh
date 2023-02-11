@@ -4,6 +4,7 @@
 
 import * as $0 from "./routes/api/send-email.ts";
 import * as $1 from "./routes/index.tsx";
+import * as $2 from "./routes/projects.tsx";
 import * as $$0 from "./islands/Cat.tsx";
 import * as $$1 from "./islands/ContactForm.tsx";
 
@@ -11,6 +12,7 @@ const manifest = {
   routes: {
     "./routes/api/send-email.ts": $0,
     "./routes/index.tsx": $1,
+    "./routes/projects.tsx": $2,
   },
   islands: {
     "./islands/Cat.tsx": $$0,

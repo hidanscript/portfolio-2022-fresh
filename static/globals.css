@@ -82,11 +82,20 @@
   overflow: hidden;
 }
 
+.hero-minimal {
+  color: black;
+  background-color: #F8D03F;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
 .pill {
   background-color: #F8D03F;
 }
 
-img {
+.cat {
   filter: grayscale(100%) invert(100%);
 }
 
@@ -118,6 +127,13 @@ body {
 
 .arrow .shape-fill {
   fill: #F8D03F;
+}
+
+.project-card {
+  background-color: #111111;
+  border-radius: 7px;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
 @-webkit-keyframes load3 {

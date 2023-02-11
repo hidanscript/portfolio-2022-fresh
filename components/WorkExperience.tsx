@@ -2,74 +2,115 @@
 import { h } from "preact";
 import { tw } from "@twind";
 import Container from "./Container.tsx";
-import Tags from "./tags/Tags.tsx"
+import Tags from "./tags/Tags.tsx";
 
-export default function MainSection () {
-    return (
-        <Container>
-            <h3 class={tw`text-2xl font-bold leading-7 mt-16 sm:text-3xl sm:truncate`}>📌 Work experience</h3>
+export default function MainSection() {
+  return (
+    <Container>
+      <h3
+        class={tw`text-2xl font-bold leading-7 mt-16 sm:text-3xl sm:truncate`}
+      >
+        📌 Work experience
+      </h3>
 
-            <h4 class={tw`text-md font-bold mt-10 mb-3`}>Whyline (July, 2022 - Present)</h4>
+      <h4 class={tw`text-md font-bold mt-10 mb-3`}>
+        Whyline (July, 2022 - Present)
+      </h4>
 
-            <div class={tw`flex flex-wrap items-center`}>
-                <span class={tw`text-sm text-black m-0 pill px-2.5 py-0.5 mt-1 mr-2 rounded-full font-bold`}>Fullstack Software Engineer</span>
-                -
-                <Tags tags={['Angular', 'Node', 'MongoDB', 'Nest']} />
-            </div>
+      <div class={tw`flex flex-wrap items-center`}>
+        <span
+          class={tw`text-sm text-black m-0 pill px-2.5 py-0.5 mt-1 mr-2 rounded-full font-bold`}
+        >
+          Fullstack Software Engineer
+        </span>
+        -
+        <Tags tags={["Angular", "Node", "MongoDB", "Nest"]} />
+      </div>
 
-            <p class={tw`text-base dark:text-white`} style={styles.text}>
-                Development and implementation in Angular, NestJs, NodeJs, MongoDB, Redis and Typescript of different modules on a Queue-reservation application, using the SCRUM methodology.
-            </p>
-            <p class={tw`text-base dark:text-white`} style={styles.text}>
-                Code reviewing on github to get the most quality and scalable code for the team, using the best practices and having a clear communication.
-            </p>
+      <p class={tw`text-base dark:text-white`} style={styles.text}>
+        Development and implementation in Angular, NestJs, NodeJs, MongoDB,
+        Redis and Typescript of different modules on a Queue-reservation
+        application, using the SCRUM methodology.
+      </p>
+      <p class={tw`text-base dark:text-white`} style={styles.text}>
+        Code reviewing on github to get the most quality and scalable code for
+        the team, using the best practices and having a clear communication.
+      </p>
 
-            <h4 class={tw`text-md font-bold mt-10 mb-3`}>Alchemy (March, 2021 - July, 2022)</h4>
+      <h4 class={tw`text-md font-bold mt-10 mb-3`}>
+        Alchemy (March, 2021 - July, 2022)
+      </h4>
 
-            <div class={tw`flex flex-wrap items-center`}>
-                <span class={tw`text-sm text-black m-0 pill px-2.5 py-0.5 mt-1 mr-2 rounded-full font-bold`}>Fullstack Software Engineer</span>
-                -
-                <Tags tags={['Node', 'React', 'MongoDB', 'Sails']} />
-            </div>
+      <div class={tw`flex flex-wrap items-center`}>
+        <span
+          class={tw`text-sm text-black m-0 pill px-2.5 py-0.5 mt-1 mr-2 rounded-full font-bold`}
+        >
+          Fullstack Software Engineer
+        </span>
+        -
+        <Tags tags={["Node", "React", "MongoDB", "Sails"]} />
+      </div>
 
-            <p class={tw`text-base dark:text-white`} style={styles.text}>
-                Development, and implementation in NodeJS, MongoDB and Express.JS backend on FinTech applications, managing and processing loans, credit scores, payment schedules, server mainteinance, linux oriented development, etc.        
-            </p>
-            <p class={tw`text-base dark:text-white`} style={styles.text}>
-                Development of frontend views with Nunjucks and SailsJS
-            </p>
+      <p class={tw`text-base dark:text-white`} style={styles.text}>
+        Development, and implementation in NodeJS, MongoDB and Express.JS
+        backend on FinTech applications, managing and processing loans, credit
+        scores, payment schedules, server mainteinance, linux oriented
+        development, etc.
+      </p>
+      <p class={tw`text-base dark:text-white`} style={styles.text}>
+        Development of frontend views with Nunjucks and SailsJS
+      </p>
 
-            <h4 class={tw`text-md font-bold mt-10 mb-3`}>Wisboo (July, 2020 - March, 2021)</h4>
+      <h4 class={tw`text-md font-bold mt-10 mb-3`}>
+        Wisboo (July, 2020 - March, 2021)
+      </h4>
 
-            <div class={tw`flex flex-wrap items-center`}>
-                <span class={tw`text-sm text-black m-0 pill px-2.5 py-0.5 mt-1 mr-2 rounded-full font-bold`}>Fullstack Software Engineer</span>
-                -
-                <Tags tags={['Angular', 'Node', 'PostgreSQL', 'Ruby on Rails']} />
-            </div>
+      <div class={tw`flex flex-wrap items-center`}>
+        <span
+          class={tw`text-sm text-black m-0 pill px-2.5 py-0.5 mt-1 mr-2 rounded-full font-bold`}
+        >
+          Fullstack Software Engineer
+        </span>
+        -
+        <Tags tags={["Angular", "Node", "PostgreSQL", "Ruby on Rails"]} />
+      </div>
 
-            <p class={tw`text-base dark:text-white`} style={styles.text}>
-                Development and integration of views, templates, bug fixes, optimization, scalability and logic in Angular.js, using Javascript, SCSS and HTML, making requests with an REST API to the backend.
-            </p>
-            <p class={tw`text-base dark:text-white`} style={styles.text}>
-                Development and integration of new modules, classes, bug fixes, query optimization and new functionalities using Ruby on Rails and Postgresql, creating and updating unit tests with RSpec
-            </p>
+      <p class={tw`text-base dark:text-white`} style={styles.text}>
+        Development and integration of views, templates, bug fixes,
+        optimization, scalability and logic in Angular.js, using Javascript,
+        SCSS and HTML, making requests with an REST API to the backend.
+      </p>
+      <p class={tw`text-base dark:text-white`} style={styles.text}>
+        Development and integration of new modules, classes, bug fixes, query
+        optimization and new functionalities using Ruby on Rails and Postgresql,
+        creating and updating unit tests with RSpec
+      </p>
 
-            <h4 class={tw`text-md font-bold mt-10 mb-3`}>Clarity S.A (July, 2019 - July, 2020)</h4>
+      <h4 class={tw`text-md font-bold mt-10 mb-3`}>
+        Clarity S.A (July, 2019 - July, 2020)
+      </h4>
 
-            <div class={tw`flex flex-wrap items-center`}>
-                <span class={tw`text-sm text-black m-0 pill px-2.5 py-0.5 mt-1 mr-2 rounded-full font-bold`}>Fullstack Software Engineer</span>
-                -
-                <Tags tags={['VB Script', 'MS SQL Server', 'JavaScript', 'Node']} />
-            </div>
-            <p class={tw`text-base dark:text-white`} style={styles.text}>
-                Development and maintenance of ERP system, laying out the whole software in ASP (Front-end) and managing queries, stored procedures, and performance in Microsoft SQL Server, scrum methodology to support the team effectively and quickly.
-            </p>
-        </Container>
-    );
+      <div class={tw`flex flex-wrap items-center`}>
+        <span
+          class={tw`text-sm text-black m-0 pill px-2.5 py-0.5 mt-1 mr-2 rounded-full font-bold`}
+        >
+          Fullstack Software Engineer
+        </span>
+        -
+        <Tags tags={["VB Script", "MS SQL Server", "JavaScript", "Node"]} />
+      </div>
+      <p class={tw`text-base dark:text-white`} style={styles.text}>
+        Development and maintenance of ERP system, laying out the whole software
+        in ASP (Front-end) and managing queries, stored procedures, and
+        performance in Microsoft SQL Server, scrum methodology to support the
+        team effectively and quickly.
+      </p>
+    </Container>
+  );
 }
 
 const styles = {
-    text: {
-      marginTop: '1rem'
-    }
+  text: {
+    marginTop: "1rem",
+  },
 };

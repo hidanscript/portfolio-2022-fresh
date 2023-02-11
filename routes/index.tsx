@@ -19,10 +19,10 @@ import Footer from "../components/Footer.tsx";
 
 export const handler: Handlers = {
   async GET(_, ctx) {
-    const resp = await fetch('https://api.github.com/users/hidanscript/repos', {
+    const resp = await fetch("https://api.github.com/users/hidanscript/repos", {
       headers: {
-        authorization: "token " + Deno.env.get("GITHUB_ACCESS_TOKEN")
-      }
+        authorization: "token " + Deno.env.get("GITHUB_ACCESS_TOKEN"),
+      },
     });
     if (resp.status === 404) {
       return ctx.render(null);
@@ -31,8 +31,8 @@ export const handler: Handlers = {
     repos = sortRepositoriesByStars(repos);
     repos = mapRepositoryList(repos.slice(0, 3));
     return ctx.render(repos);
-  }
-}
+  },
+};
 
 const TITLE = "David Marcano - Full-stack developer - Portfolio";
 const DESCRIPTION = "David Marcano - Fullstack developer";
@@ -51,12 +51,11 @@ export default function Home({ data, url }: PageProps) {
       </Head>
 
       <div class={tw`flex flex-col min-h-screen`}>
-        <Hero />
+        <Hero minimal={false} />
         <Arrow />
         <AboutMe />
         <WorkExperience />
         <Repositories repos={data} />
-        <ContactForm />
         <Footer />
       </div>
     </>
