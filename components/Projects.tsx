@@ -23,7 +23,7 @@ export default function Projects() {
       >
         💡 Personal Projects
       </h3>
-      <p class={tw`text-base text-white m-2 mt-14 mb-10`}>
+      <p class={tw`text-base text-white m-2 mt-10 mb-10`}>
         Here are some of my biggest personal projects. I've worked on these 
         during my free time, and I'm very proud of them. I hope you like them too!
 
@@ -40,7 +40,7 @@ export default function Projects() {
           github
         </a>
       </p>
-      <div class={tw`mt-20`}>
+      <div class={tw`mt-10`}>
         {PROJECTS.map((project, id) => {
             return (
             <ProjectCard

@@ -2,7 +2,7 @@ export const PROJECTS = [
   {
     title: "Sprint",
     imgSrc: "/img/sprint.png",
-    description: "Sprint is a test backend framework developed with Typescript using the built-in Node.js API modules. (Any similarities with express, are pure coincidence)",
+    description: "Sprint is a light-weighted backend framework developed with Typescript using the built-in Node.js API modules. (Any similarities with express, are pure coincidence)",
     tags: ['TypeScript', 'Node'],
     github: "https://github.com/hidanscript/sprintjs",
     docs: "https://hidanscript.github.io/sprintjs/"
