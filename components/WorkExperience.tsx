@@ -21,7 +21,7 @@ export default function MainSection() {
         <span
           class={tw`text-sm text-black m-0 pill px-2.5 py-0.5 mt-1 mr-2 rounded-full font-bold`}
         >
-          Fullstack Software Engineer
+          Software Engineer
         </span>
         -
         <Tags tags={["Angular", "Node", "MongoDB", "Nest"]} />
@@ -45,7 +45,7 @@ export default function MainSection() {
         <span
           class={tw`text-sm text-black m-0 pill px-2.5 py-0.5 mt-1 mr-2 rounded-full font-bold`}
         >
-          Fullstack Software Engineer
+          NodeJS Developer
         </span>
         -
         <Tags tags={["Node", "React", "MongoDB", "Sails"]} />
@@ -69,7 +69,7 @@ export default function MainSection() {
         <span
           class={tw`text-sm text-black m-0 pill px-2.5 py-0.5 mt-1 mr-2 rounded-full font-bold`}
         >
-          Fullstack Software Engineer
+          Fullstack Developer
         </span>
         -
         <Tags tags={["Angular", "Node", "PostgreSQL", "Ruby on Rails"]} />
@@ -97,7 +97,7 @@ export default function MainSection() {
           Fullstack Software Engineer
         </span>
         -
-        <Tags tags={["VB Script", "MS SQL Server", "JavaScript", "Node"]} />
+        <Tags tags={["MS SQL Server", "JavaScript", "Node", "VB Script"]} />
       </div>
       <p class={tw`text-base dark:text-white`} style={styles.text}>
         Development and maintenance of ERP system, laying out the whole software

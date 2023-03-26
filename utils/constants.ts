@@ -1,3 +1,4 @@
+// deno-lint-ignore no-explicit-any
 export const CODE_COLORS: any = {
   default: "bg-gray-400",
   JavaScript: "bg-yellow-400",
@@ -5,20 +6,66 @@ export const CODE_COLORS: any = {
   Ruby: "bg-red-400",
 } as const;
 
+// deno-lint-ignore no-explicit-any
 export const TECH_COLORS: any = {
-  MongoDB: "bg-green-400",
-  Express: "bg-gray-400",
-  React: "bg-blue-400",
-  Node: "bg-green-500",
-  Sails: "bg-purple-400",
-  "Ruby on Rails": "bg-red-500",
-  PostgreSQL: "bg-blue-200",
-  Angular: "bg-red-400",
-  "VB Script": "bg-blue-500",
-  "MS SQL Server": "bg-yellow-600",
-  JavaScript: "bg-yellow-400",
-  Nest: "bg-pink-500",
-  TypeScript: "bg-blue-400",
-  Fresh: "bg-yellow-300",
-  Deno: "bg-white",
+  MongoDB: {
+    color: "bg-green-400",
+    font: "text-black"
+  },
+  Express: {
+    color: "bg-gray-400",
+    font: "text-black"
+  },
+  React: {
+    color: "bg-blue-400",
+    font: "text-black"
+  },
+  Node: {
+    color: "bg-green-500",
+    font: "text-black"
+  },
+  Sails: {
+    color: "bg-purple-400",
+    font: "text-white"
+  },
+  "Ruby on Rails": {
+    color: "bg-red-500",
+    font: "text-white"
+  },
+  PostgreSQL: {
+    color: "bg-blue-200",
+    font: "text-black"
+  },
+  Angular: {
+    color: "bg-red-400",
+    font: "text-black"
+  },
+  "VB Script": { 
+    color: "bg-blue-500",
+    font: "text-white",
+  },
+  "MS SQL Server": {
+    color: "bg-yellow-600",
+    font: "text-black",
+  },
+  JavaScript: {
+    color: "bg-yellow-400",
+    font: "text-black",
+  },
+  Nest: {
+    color: "bg-pink-500",
+    font: "text-white",
+  },
+  TypeScript: {
+    color: "bg-blue-400",
+    font: "text-white",
+  },
+  Fresh: {
+    color: "bg-yellow-300",
+    font: "text-black",
+  },
+  Deno: {
+    color: "bg-white",
+    font: "text-black"
+  }
 } as const;

@@ -15,7 +15,11 @@ export default function Tags ({ tags }: tagsProps) {
                 return (
                     <span
                         key={id}
-                        class={tw`text-xs text-black ml-2 px-2.5 py-0.5 mt-1 rounded-full ${ TECH_COLORS[tag] || TECH_COLORS['default'] }`}
+                        class={
+                            tw`text-xs ml-2 px-2.5 py-0.5 mt-1 rounded-full font-bold
+                            ${ TECH_COLORS[tag].color || TECH_COLORS['default'] } 
+                            ${ TECH_COLORS[tag].font || TECH_COLORS['default'] }`
+                        }
                     >
                         { tag }
                     </span>
